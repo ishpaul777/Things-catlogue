@@ -6,9 +6,9 @@ class App
 
   def process(input)
     case input
-    # when 1
-    # 	#1 list books
-    # end
+    when 1
+      # 1 list books
+      @data.show_books
 
     # when 2
     # 	# '2 - List all music albums'

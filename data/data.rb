@@ -59,4 +59,16 @@ class Data
     File.write('data/books.json', JSON.generate(@books))
     File.write('data/labels.json', JSON.generate(@labels))
   end
+
+  def show_books
+    @books.each_with_index do |book, i|
+      puts "#{i + 1} ->"
+      puts "Publisher: #{book['publisher']} "
+      puts "Date published: #{book['date_published']} "
+      puts "Cover state: #{book['cover_state']} "
+      puts "Title: #{book['label']['title']}"
+      puts "Color: #{book['label']['color']}"
+      puts "\n"
+    end
+  end
 end
