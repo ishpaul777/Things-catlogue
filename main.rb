@@ -1,5 +1,5 @@
+require_relative './app'
 # 04 Create a main.rb file that will serve as your console app entry-point.
-
 # 05 Implement startup actions:
 def main_menu
   # Present the user with a list of options to perform.
@@ -24,7 +24,7 @@ end
 
 def main(app = App.new)
   input = main_menu
-  if input.positive? && input <= 6
+  if input.positive? && input <= 10
     # If needed, ask for parameters for the option.
     app.process(input)
     main(app)
