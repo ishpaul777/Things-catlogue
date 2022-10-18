@@ -11,5 +11,5 @@ class Book < Item
     super || cover_state == 'bad'
   end
 
-  attr_reader :publisher, :cover_state
+  attr_accessor :publisher, :cover_state
 end

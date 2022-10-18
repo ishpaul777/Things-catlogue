@@ -61,8 +61,10 @@ class Data
   end
 
   def show_books
+		puts "\n"
     @books.each_with_index do |book, i|
-      puts "#{i + 1} ->"
+    print 'OOPS Catlog# '
+		puts "#{i + 1} ->"
       puts "Publisher: #{book['publisher']} "
       puts "Date published: #{book['date_published']} "
       puts "Cover state: #{book['cover_state']} "
