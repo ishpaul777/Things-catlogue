@@ -1,9 +1,9 @@
 # 01 Create Item class in a separate .rb file.
 
 class Item
-  def initialize(date_published, archived, id)
+  def initialize(date_published, id)
     @date_published = Date.parse(date_published)
-    @archived = archived
+    @archived = false
     @id = id
   end
 
@@ -44,4 +44,7 @@ class Item
   def move_to_archive
     @archived = true if can_be_archived?
   end
+
+  attr_accessor :publish_date
+  attr_reader :id, :archived, :genre, :author, :label
 end
