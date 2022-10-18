@@ -28,7 +28,7 @@ def main(app = App.new)
     # If needed, ask for parameters for the option.
     app.process(input)
     main(app)
-  elsif input == 0
+  elsif input.zero?
     # Have a way to quit the app.
     print 'OOPS Catlog# '
     puts 'Quitted program'

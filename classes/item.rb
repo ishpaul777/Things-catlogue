@@ -2,7 +2,7 @@
 
 class Item
   def initialize(date_published, archived, id)
-    @date_published = Date.parse(publish_date)
+    @date_published = Date.parse(date_published)
     @archived = archived
     @id = id
   end
@@ -42,6 +42,6 @@ class Item
   # should change the archived property to true if the result of the can_be_archived?() method is true
   # should do nothing if the result of the can_be_archived?() method is false
   def move_to_archive
-    @archived = true if (can_be_archived?)
+    @archived = true if can_be_archived?
   end
 end
