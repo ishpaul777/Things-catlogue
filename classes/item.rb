@@ -1,4 +1,5 @@
 # 01 Create Item class in a separate .rb file.
+require 'date'
 
 class Item
   def initialize(date_published, id)
@@ -34,7 +35,7 @@ class Item
   # should return true if published_date is older than 10 years
   # otherwise, it should return false
   def can_be_archived?
-    true if (Date.today.to_time.year - @publish_date.to_time.year) > 10
+    true if (Date.today.to_time.year - @date_published.to_time.year) > 10
   end
 
   # move_to_archive() in the Item class
@@ -45,6 +46,6 @@ class Item
     @archived = true if can_be_archived?
   end
 
-  attr_accessor :publish_date
+  attr_accessor :date_published
   attr_reader :id, :archived, :genre, :author, :label
 end
