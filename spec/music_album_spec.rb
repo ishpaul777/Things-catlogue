@@ -4,7 +4,7 @@ require_relative '../classes/item'
 
 describe MusicAlbum do
   context 'test music album' do
-    let(:music_album) { MusicAlbum.new(true, '2010-01-01', false) }
+    let(:music_album) { MusicAlbum.new(true, '2010-01-01') }
 
     it 'should return instance of MusicAlbum' do
       expect(music_album).to be_an_instance_of MusicAlbum
