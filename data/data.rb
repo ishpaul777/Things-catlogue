@@ -131,4 +131,37 @@ class Data
     File.write('data/albums.json', JSON.generate(@albums))
     File.write('data/genres.json', JSON.generate(@genres))
   end
+
+  def show_labels
+    puts "\n"
+    @labels.each_with_index do |label, i|
+      print 'OOPS Catlog# '
+      puts "#{i + 1} ->"
+      puts "Title: #{label['title']}"
+      puts "Color: #{label['color']}"
+      puts "\n"
+    end
+  end
+
+  def show_genres
+    puts "\n"
+    @genres.each_with_index do |genre, i|
+      print 'OOPS Catlog# '
+      print "#{i + 1}-> "
+      puts "Genre: #{genre['name']}"
+      puts "\n"
+    end
+  end
+
+  def show_albums
+    puts "\n"
+    @albums.each_with_index do |album, i|
+      print 'OOPS Catlog# '
+      puts "#{i + 1} ->"
+      puts "Available on spotify: #{album['on_spotify']}"
+      puts "Date Published: #{album['date_published']}"
+      puts "Genre: #{album['genre']['name']}"
+      puts "\n"
+    end
+  end
 end

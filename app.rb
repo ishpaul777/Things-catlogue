@@ -10,17 +10,20 @@ class App
       # 1 list books
       @data.show_books
 
-    # when 2
-    # 	# '2 - List all music albums'
+    when 2
+      # '2 - List all music albums'
+      @data.show_albums
 
-    # when 3
-    # 	# '3 - List of games'
+      # when 3
+      # 	# '3 - List of games'
 
-    # when 4
-    # 	# '4 - List all genres (Comedy or Thriller)'
+    when 4
+      #	# '4 - List all genres (Comedy or Thriller)'
+      @data.show_genres
 
-    # when 5
-    # 	# '5 - List all labels (Gift or New Gift)'
+    when 5
+      # '5 - List all labels (Gift or New Gift)'
+      @data.show_labels
 
     # when 6
     # 	# '6 - List all authors'
