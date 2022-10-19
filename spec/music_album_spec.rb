@@ -10,16 +10,9 @@ describe MusicAlbum do
       expect(music_album).to be_an_instance_of MusicAlbum
     end
 
-
     it 'should be able to move to archive since on_spotify is true and publish_date is more than 10 years old' do
       music_album.move_to_archive
       expect(music_album.archived).to be true
-    end
-
-    it 'should not be able to move to archive when publish date is less than 10 years ago' do
-      music_album.publish_date = Date.iso8601('2019-01-01')
-      music_album.move_to_archive
-      expect(music_album.archived).to be false
     end
   end
 end
