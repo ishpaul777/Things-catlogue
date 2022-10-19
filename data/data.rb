@@ -1,11 +1,15 @@
 require 'json'
 require_relative '../classes/book'
 require_relative '../classes/label'
+require_relative '../classes/music_album'
+require_relative '../classes/genre'
 
 class Data
   def initialize
     @books = JSON.parse(File.read('data/books.json'))
     @labels = JSON.parse(File.read('data/labels.json'))
+    @albums = JSON.parse(File.read('data/albums.json'))
+    @genres = JSON.parse(File.read('data/genres.json'))
   end
 
   def add_label(item)
@@ -70,6 +74,93 @@ class Data
       puts "Cover state: #{book['cover_state']} "
       puts "Title: #{book['label']['title']}"
       puts "Color: #{book['label']['color']}"
+      puts "\n"
+    end
+  end
+
+  def add_genre(album)
+    print 'OOPS Catlog# '
+    print 'Genre Name: '
+    name = gets.chomp
+
+    genre = Genre.new(name)
+    album.add_genre(genre)
+  end
+
+  def add_album
+    print 'OOPS Catlog# '
+
+    print 'OOPS Catlog# '
+    print 'Available on spotify (Y or N): '
+    on_spotify = gets.chomp.upcase
+
+    case on_spotify
+    when 'Y'
+      on_spotify = true
+    when 'N'
+      on_spotify = false
+    else
+      puts 'OOPS Library# Please enter a valid input'
+      add_album?
+    end
+
+    print 'OOPS Catlog# '
+    print 'Publish date: '
+    date_published = gets.chomp
+    album = MusicAlbum.new(date_published, on_spotify)
+
+    add_genre(album)
+    store_album(album)
+  end
+
+  def store_album(album)
+    genre_obj = {
+      name: album.genre.name
+    }
+
+    album_obj = {
+      on_spotify: album.on_spotify,
+      date_published: album.date_published.to_s,
+      genre: genre_obj
+    }
+
+    # push it to the book json obj
+    @albums << album_obj
+    @genres << genre_obj
+    # override
+    File.write('data/albums.json', JSON.generate(@albums))
+    File.write('data/genres.json', JSON.generate(@genres))
+  end
+
+  def show_labels
+    puts "\n"
+    @labels.each_with_index do |label, i|
+      print 'OOPS Catlog# '
+      puts "#{i + 1} ->"
+      puts "Title: #{label['title']}"
+      puts "Color: #{label['color']}"
+      puts "\n"
+    end
+  end
+
+  def show_genres
+    puts "\n"
+    @genres.each_with_index do |genre, i|
+      print 'OOPS Catlog# '
+      print "#{i + 1}-> "
+      puts "Genre: #{genre['name']}"
+      puts "\n"
+    end
+  end
+
+  def show_albums
+    puts "\n"
+    @albums.each_with_index do |album, i|
+      print 'OOPS Catlog# '
+      puts "#{i + 1} ->"
+      puts "Available on spotify: #{album['on_spotify']}"
+      puts "Date Published: #{album['date_published']}"
+      puts "Genre: #{album['genre']['name']}"
       puts "\n"
     end
   end
