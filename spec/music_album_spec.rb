@@ -1,6 +1,6 @@
 require 'date'
-require_relative '../ruby/music_album'
-require_relative '../ruby/item'
+require_relative '../classes/music_album'
+require_relative '../classes/item'
 
 describe MusicAlbum do
   context 'test music album' do
