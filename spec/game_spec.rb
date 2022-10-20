@@ -1,4 +1,4 @@
-require_relative '../ruby/game'
+require_relative '../classes/game'
 
 describe Game do
   before :each do
