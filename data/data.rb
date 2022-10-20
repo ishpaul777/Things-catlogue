@@ -66,6 +66,9 @@ class Data
     # override
     File.write('data/books.json', JSON.generate(@books))
     File.write('data/labels.json', JSON.generate(@labels))
+
+    @books = JSON.parse(File.read('data/books.json'))
+    @labels = JSON.parse(File.read('data/labels.json'))
   end
 
   def show_books
@@ -111,7 +114,7 @@ class Data
     print 'OOPS Catlog# '
     print 'Publish date: '
     date_published = gets.chomp
-    album = MusicAlbum.new(date_published, on_spotify)
+    album = MusicAlbum.new(on_spotify, date_published)
 
     add_genre(album)
     store_album(album)
@@ -134,6 +137,9 @@ class Data
     # override
     File.write('data/albums.json', JSON.generate(@albums))
     File.write('data/genres.json', JSON.generate(@genres))
+
+    @albums = JSON.parse(File.read('data/albums.json'))
+    @genres = JSON.parse(File.read('data/genres.json'))
   end
 
   def show_labels
@@ -228,6 +234,9 @@ class Data
     # override
     File.write('data/games.json', JSON.generate(@games))
     File.write('data/author.json', JSON.generate(@authors))
+
+    @games = JSON.parse(File.read('data/games.json'))
+    @authors = JSON.parse(File.read('data/author.json'))
   end
 
   def show_games
