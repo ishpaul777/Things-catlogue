@@ -40,17 +40,17 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Author1**
+👤 **Ishpaul Singh**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- Github - [@ishpaul777](https://github.com/ishpaul777)
+- Twitter - [@ishpaul777](https://twitter.com/ishpaul777)
+- Linkedin - [Ishpaul Singh](https://www.linkedin.com/in/ishpaul777/)
 
-👤 **Author2**
+👤 **Esmatullah Ahmadzai (Esmat)**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Esmatullah Ahamdzai](https://github.com/eaesmat)
+- Twitter: [@Esmatullah Ahamdzai](https://twitter.com/ea_ahmadzai)
+- LinkedIn: [@Esmatullah Ahamdzai](https://www.linkedin.com/in/esmatullah-ahmadzai/)
 
 ## 🤝 Contributing
 
