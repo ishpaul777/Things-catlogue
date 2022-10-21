@@ -7,7 +7,7 @@ This is program which can take care of organising your things ans information re
 > - Add new authors
 > - Add new music albums.
 > - Add new genre
->  And see the list of all items will be acheivable in a beautiful and well-organized way with this project!
+> - And see the list of all items will be acheivable in a beautiful and well-organized way with this project!
 
 
 ## Built With
