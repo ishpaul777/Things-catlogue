@@ -5,7 +5,7 @@ require_relative '../classes/item'
 describe Genre do
   context 'test genre' do
     let(:genre) { Genre.new('Rock') }
-    let(:music_album) { MusicAlbum.new(true, '2010-01-01', false) }
+    let(:music_album) { MusicAlbum.new(true, '2010-01-01') }
 
     it 'should return instance of Genre' do
       expect(genre).to be_an_instance_of Genre
@@ -18,11 +18,8 @@ describe Genre do
     end
 
     it 'test add item' do
-      allow(music_album).to receive(:genre) { genre }
-      expect(music_album).to receive(:genre=)
-
-      genre.add_item(music_album)
-      expect(music_album.genre).to eq(genre)
+      music_album.add_genre(genre)
+      expect(genre.items[0]).to eq(music_album)
     end
   end
 end
