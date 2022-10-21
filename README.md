@@ -1,41 +1,26 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# OOPS catlog
 
-# Project Name
-
-> Description the project.
+This is program which can take care of organising your things ans information related to them. One can 
+> - Add new books
+> - Add new labels
+> - Add new games
+> - Add new authors
+> - Add new music albums.
+> - Add new genre
+>  And see the list of all items will be acheivable in a beautiful and well-organized way with this project!
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
+- Ruby
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+- If you dont have Ruby installed on your computer, you can download it from here.
+- Clone the project in your machine
+- To Start the programs
 
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
+```ruby main.rb```
 
 
 ## Authors
