@@ -1,6 +1,6 @@
 # OOPS catlog
 
-This is program which can take care of organising your things ans information related to them. One can 
+This is program which can take care of organising your things and information related to them. One can 
 > - Add new books
 > - Add new labels
 > - Add new games
